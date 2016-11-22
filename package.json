@@ -1,6 +1,6 @@
 {
   "name": "generator-presto-preso",
-  "version": "0.0.0-semantically-released",
+  "version": "1.0.0",
   "description": "yeoman generator to create a reveal.js presentation, the @edm00se way",
   "homepage": "https://github.com/edm00se/generator-presto-preso",
   "author": {
