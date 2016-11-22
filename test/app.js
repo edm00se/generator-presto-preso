@@ -1,9 +1,11 @@
 'use strict';
-var path = require('path');
-var assert = require('yeoman-assert');
-var helpers = require('yeoman-test');
+const path = require('path');
+const assert = require('yeoman-assert');
+const helpers = require('yeoman-test');
+const ONE_SECOND = 1000;
 
 describe('generator-presto-preso', function () {
+  this.timeout(10 * ONE_SECOND);
   describe('github flavored - my namespace', function () {
     before(function () {
       return helpers.run(path.join(__dirname, '../generators/app'))

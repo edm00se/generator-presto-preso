@@ -1,0 +1,10 @@
+{
+
+  "index": {
+    "layout": "index",
+    "title": "<%= title %>",
+    "description": "<%= description %>",
+    "keywords": "static, reveal.js"
+  }
+
+}

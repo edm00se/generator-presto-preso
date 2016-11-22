@@ -3,6 +3,18 @@
 
 Meant to provide a configurable variant of [edm00se/BlueChalkySoup](https://github.com/edm00se/BlueChalkySoup).
 
+## Features
+
+Scaffolds an application which:
+
+- centers on a [reveal.js](http://lab.hakim.se/reveal-js/) slide deck
+- provides for static site generation to `docs/` for convenient hosting on [GitHub Pages](https://pages.github.com/)
+- provides a Node server, for convenient serving of the slide deck
+  - in an EJS template
+  - with a viewer and a controller endpoint (`/control`)
+  - the controller pushes slide state to the viewers via web socket connection
+- prefills the slide deck and project information with user's GitHub user info, or directly input information
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-presto-preso using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
@@ -36,5 +48,5 @@ MIT © [Eric McCormick](https://ericmccormick.io/)
 [travis-url]: https://travis-ci.org/edm00se/generator-presto-preso
 [daviddm-image]: https://david-dm.org/edm00se/generator-presto-preso.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/edm00se/generator-presto-preso
-[codecov-image]: https://codecov.io/github/edm00se/generator-xsp/coverage.svg
-[codecov-url]: https://codecov.io/github/edm00se/generator-xsp
+[codecov-image]: https://codecov.io/github/edm00se/generator-presto-preso/coverage.svg
+[codecov-url]: https://codecov.io/github/edm00se/generator-presto-preso
