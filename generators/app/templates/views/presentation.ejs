@@ -1,0 +1,52 @@
+<div class="reveal">
+
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+
+		<section data-markdown>
+			<script type="text/template">
+				## <%= pName %>
+
+
+				#### <%= tagLine %>
+
+				<br />
+				[by <%= author %>](https://twitter.com/<%= twitName %>)
+
+			</script>
+		</section>
+
+		<section data-markdown>
+			<script type="text/template">
+				## Who Am I?
+
+				##### <%= author %>
+
+				<img src="<% if (avatar) { %><%= avatar %><% } %><% if(!avatar) { %>img/profile.svg<% } %>" class="img-circle img-responsive img-center profile"  />
+
+				<% if (bio) { %><%= bio %><% } %>
+
+				<br />
+				[<i class="fa fa-twitter" aria-hidden="true"></i>/<%= twitName %>](https://twitter.com/<%= twitName %>)&nbsp;&nbsp;&nbsp;<% if (ghName) { %>[<i class="fa fa-github" aria-hidden="true"></i>/<%= ghName %>](https://github.com/<%= ghName %>)<br /><% } %>
+				[<i class="fa fa-pencil" aria-hidden="true"></i> <%= author %>/<%= name %>](<%= authorUrl %>)
+
+			</script>
+		</section>
+
+		<section>
+			Another slide!
+		</section>
+
+		<section data-markdown>
+			<script type="text/template">
+				## Questions?
+
+				<br />
+				<% if (ghName && ama) { %>[<%= ghName %>/ama](https://github.com/<%= ghName %>/ama)<% } %>
+
+			</script>
+		</section>
+
+	</div>
+
+</div>

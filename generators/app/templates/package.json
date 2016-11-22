@@ -1,0 +1,66 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "start": "node app.js",
+    "clean": "rimraf docs",
+    "build": "npm run clean && grunt",
+    "postinstall": "bower",
+    "dev": "echo \"?\"",
+    "static-preview": "http-server --silent ./docs/",
+    "ensure-docs": "path-exists docs && echo \"docs/ exists\" || grunt",
+    "test": "npm run ensure-docs && concurrently --kill-others \"npm run static-preview\" \"mocha\""
+  },
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "cookie-parser": "1.4.3",
+    "debug": "2.3.3",
+    "ejs": "2.5.2",
+    "express": "4.14.0",
+    "http-auth": "3.1.1",
+    "morgan": "1.7.0",
+    "serve-favicon": "2.3.2",
+    "socket.io": "1.6.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "chai-files": "1.4.0",
+    "chai-http": "3.0.0",
+    "concurrently": "3.1.0",
+    "grunt": "1.0.1",
+    "grunt-cli": "1.2.0",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-ejs-static": "0.4.3",
+    "grunt-rewrite": "1.0.1",
+    "grunt-shell": "2.1.0",
+    "http-server": "0.9.0",
+    "mocha": "3.1.2",
+    "path-exists-cli": "1.0.0",
+    "rimraf": "2.5.4"
+  },
+  "optionalDependencies": {
+    "bower": "1.8.0"
+  },
+  "engines": {
+    "node": ">=4.5",
+    "npm": ">=3"
+  },
+  "description": "<%= description %>",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+<%= repoUrl %>.git"
+  },
+  "author": "<%= author %><% if (authorUrl) { %> (<%= authorUrl %>)<% } %>",
+  "license": "<%= license %>",
+  "bugs": {
+    "url": "<%= repoUrl %>/issues"
+  },
+  "homepage": "<%= repoUrl %>#readme"
+}
