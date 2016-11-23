@@ -14,6 +14,7 @@ Scaffolds an application which:
   - with a viewer and a controller endpoint (`/control`)
   - the controller pushes slide state to the viewers via web socket connection
 - prefills the slide deck and project information with user's GitHub user info, or directly input information
+- provides live-reload local dev server, triggered by file save to the presentation (or any EJS template in `views/`, such as `views/presentation.ejs`)
 
 ## Installation
 
@@ -29,6 +30,12 @@ Then generate your new project:
 ```bash
 yo presto-preso
 ```
+
+### Using the Project
+
+- `npm run dev`
+- edit the `views/presentation.ejs` file
+- preview in your browser as you work
 
 ## Getting To Know Yeoman
 

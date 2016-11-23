@@ -7,7 +7,7 @@
     "clean": "rimraf docs",
     "build": "npm run clean && grunt",
     "postinstall": "bower",
-    "dev": "echo \"?\"",
+    "dev": "concurrently --kill-others \"npm start\" \"browser-sync start -p http://localhost:5001/ --files views\"",
     "static-preview": "http-server --silent ./docs/",
     "ensure-docs": "path-exists docs && echo \"docs/ exists\" || grunt",
     "test": "npm run ensure-docs && concurrently --kill-others \"npm run static-preview\" \"mocha\""
@@ -24,6 +24,7 @@
     "socket.io": "1.6.0"
   },
   "devDependencies": {
+    "browser-sync": "2.18.2",
     "chai": "3.5.0",
     "chai-files": "1.4.0",
     "chai-http": "3.0.0",
