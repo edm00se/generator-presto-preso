@@ -156,14 +156,18 @@ module.exports = yeoman.Base.extend({
     };
     this.fs.copyTpl(
       this.templatePath('./*'),
-      this.destinationPath('./'), opts
+      this.destinationPath('./.'), opts
     );
     this.fs.copyTpl(
       this.templatePath('./views/presentation.ejs'),
       this.destinationPath('./views/presentation.ejs'), opts
     );
+    this.fs.copyTpl(
+      this.templatePath('./views/header.ejs'),
+      this.destinationPath('./views/header.ejs'), opts
+    );
 
-    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/header.ejs', './views/index.ejs', './public/', './routes/', './test/', './.bowerrc', './.editorconfig', './.gitignore'].forEach(function (val) {
+    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/', './.bowerrc', './.editorconfig', './.gitignore'].forEach(function (val) {
       ctx.fs.copy(
         ctx.templatePath(val),
         ctx.destinationPath(val)
