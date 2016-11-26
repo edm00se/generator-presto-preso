@@ -110,9 +110,6 @@ module.exports = yeoman.Base.extend({
     let avatarUrl;
     let bio;
     let twitName = this.props.twittername;
-    if (twitName === '') {
-      twitName = null;
-    }
     if (this.props.usegh) {
       if (this.props.projname.includes('/')) {
         const tmp = this.props.projname.split('/');
@@ -177,7 +174,7 @@ module.exports = yeoman.Base.extend({
         ctx.destinationPath(val)
       );
     });
-    ['./_bowerrc', './_editorconfig', './_gitignore'].forEach(function (val) {
+    ['./_editorconfig', './_gitignore'].forEach(function (val) {
       ctx.fs.copy(
         ctx.templatePath(val),
         ctx.destinationPath(val.replace(/_/, '.'))
@@ -186,6 +183,6 @@ module.exports = yeoman.Base.extend({
   },
 
   install: function () {
-    this.installDependencies();
+    this.npmInstall();
   }
 });

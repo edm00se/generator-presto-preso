@@ -30,8 +30,7 @@ describe('generator-presto-preso', function () {
         'Gruntfile.js',
         'README.md',
         'routes/index.js',
-        'test/index.js',
-        'public/components/reveal.js/js/reveal.js'
+        'test/index.js'
       ]);
     });
   });
@@ -59,8 +58,7 @@ describe('generator-presto-preso', function () {
         'Gruntfile.js',
         'README.md',
         'routes/index.js',
-        'test/index.js',
-        'public/components/reveal.js/js/reveal.js'
+        'test/index.js'
       ]);
     });
   });
@@ -89,8 +87,7 @@ describe('generator-presto-preso', function () {
         'Gruntfile.js',
         'README.md',
         'routes/index.js',
-        'test/index.js',
-        'public/components/reveal.js/js/reveal.js'
+        'test/index.js'
       ]);
     });
   });
