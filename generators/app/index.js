@@ -167,10 +167,16 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('./views/header.ejs'), opts
     );
 
-    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/', './.bowerrc', './.editorconfig', './.gitignore'].forEach(function (val) {
+    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/'].forEach(function (val) {
       ctx.fs.copy(
         ctx.templatePath(val),
         ctx.destinationPath(val)
+      );
+    });
+    ['./_bowerrc', './_editorconfig', './_gitignore'].forEach(function (val) {
+      ctx.fs.copy(
+        ctx.templatePath(val),
+        ctx.destinationPath(val.replace(/_/, '.'))
       );
     });
   },
