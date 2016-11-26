@@ -109,6 +109,10 @@ module.exports = yeoman.Base.extend({
     let authUrl = this.props.authorurl;
     let avatarUrl;
     let bio;
+    let twitName = this.props.twittername;
+    if (twitName === '') {
+      twitName = null;
+    }
     if (this.props.usegh) {
       if (this.props.projname.includes('/')) {
         const tmp = this.props.projname.split('/');
@@ -150,7 +154,7 @@ module.exports = yeoman.Base.extend({
       ghName: this.props.githubname,
       bio: bio,
       avatar: avatarUrl,
-      twitName: this.props.twittername,
+      twitName: twitName,
       authorUrl: authUrl,
       ama: this.props.ama
     };
