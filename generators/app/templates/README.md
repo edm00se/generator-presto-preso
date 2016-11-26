@@ -18,7 +18,8 @@ When run locally, unless an environment variable is set, the application will ru
 On the server, the app will try to pull, in order, the port number from an environment variable set of `PORT` or `VCAP_APP_PORT`.
 
 ##### Controlling the Presentation
-The node app uses basic auth to protect the _/control_ end point. By default, these credentials (which are embedded in the _/routes/index.js_ file). Their defaults (which you are encouraged to change):
+The node app uses basic auth to protect the _/control_ end point. By default, these credentials (which are embedded in the _/routes/index.js_ file). The values are settable via the `CONTROLLER_NAME` and `CONTROLLER_PW` environment variables, with defaults of :
+
 ```
 username: admin
 password: someAmazingP@$$w0rd
