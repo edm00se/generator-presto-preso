@@ -91,7 +91,7 @@ module.exports = yeoman.Base.extend({
         type: 'confirm',
         name: 'ama',
         message: 'Do you have an AMA repo on GitHub?',
-        default: true,
+        default: false,
         store: true
       }
     ];
