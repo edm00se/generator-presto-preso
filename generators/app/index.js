@@ -91,7 +91,7 @@ module.exports = yeoman.Base.extend({
         type: 'confirm',
         name: 'ama',
         message: 'Do you have an AMA repo on GitHub?',
-        default: true,
+        default: false,
         store: true
       }
     ];
@@ -109,6 +109,10 @@ module.exports = yeoman.Base.extend({
     let authUrl = this.props.authorurl;
     let avatarUrl;
     let bio;
+    let twitName = this.props.twittername;
+    if (twitName === '') {
+      twitName = null;
+    }
     if (this.props.usegh) {
       if (this.props.projname.includes('/')) {
         const tmp = this.props.projname.split('/');
@@ -150,7 +154,7 @@ module.exports = yeoman.Base.extend({
       ghName: this.props.githubname,
       bio: bio,
       avatar: avatarUrl,
-      twitName: this.props.twittername,
+      twitName: twitName,
       authorUrl: authUrl,
       ama: this.props.ama
     };
@@ -167,10 +171,16 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('./views/header.ejs'), opts
     );
 
-    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/', './.bowerrc', './.editorconfig', './.gitignore'].forEach(function (val) {
+    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/'].forEach(function (val) {
       ctx.fs.copy(
         ctx.templatePath(val),
         ctx.destinationPath(val)
+      );
+    });
+    ['./_bowerrc', './_editorconfig', './_gitignore'].forEach(function (val) {
+      ctx.fs.copy(
+        ctx.templatePath(val),
+        ctx.destinationPath(val.replace(/_/, '.'))
       );
     });
   },
