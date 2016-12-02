@@ -1,11 +1,7 @@
 # generator-presto-preso [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][codecov-image]][codecov-url]
 > yeoman generator to create a reveal.js presentation, the @edm00se way
 
-Meant to provide a configurable variant of [edm00se/BlueChalkySoup](https://github.com/edm00se/BlueChalkySoup).
-
-## Features
-
-Scaffolds an application which:
+Configures and scaffolds an application which:
 
 - centers on a [reveal.js](http://lab.hakim.se/reveal-js/) slide deck
 - provides for static site generation to `docs/` for convenient hosting on [GitHub Pages](https://pages.github.com/)

@@ -22,6 +22,8 @@
   "main": "generators/index.js",
   "keywords": [
     "reveal.js",
+    "static",
+    "ejs",
     "yeoman-generator"
   ],
   "dependencies": {
