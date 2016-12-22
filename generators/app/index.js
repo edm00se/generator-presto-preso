@@ -155,31 +155,26 @@ module.exports = class extends Generator {
       authorUrl: authUrl,
       ama: this.props.ama
     };
-    this.fs.copyTpl(
-      this.templatePath('./*'),
-      this.destinationPath('./'), opts
-    );
-    this.fs.copyTpl(
-      this.templatePath('./views/presentation.ejs'),
-      this.destinationPath('./views/presentation.ejs'), opts
-    );
-    this.fs.copyTpl(
-      this.templatePath('./views/header.ejs'),
-      this.destinationPath('./views/header.ejs'), opts
-    );
-
+    ['app.js', 'Gruntfile.js', 'LICENSE.md', 'package.json', 'README.md', './views/presentation.ejs', './views/header.ejs'].forEach(val => {
+      ctx.fs.copyTpl(
+        ctx.templatePath(val),
+        ctx.destinationPath(val), opts
+      );
+    });
     ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/'].forEach(function (val) {
       ctx.fs.copy(
         ctx.templatePath(val),
         ctx.destinationPath(val)
       );
     });
-    ['./_editorconfig', './_gitignore'].forEach(function (val) {
-      ctx.fs.copy(
-        ctx.templatePath(val),
-        ctx.destinationPath(val.replace(/_/, '.'))
-      );
-    });
+    this.fs.copyTpl(
+      this.templatePath('./_editorconfig'),
+      this.destinationPath('./.editorconfig'), opts
+    );
+    this.fs.copyTpl(
+      this.templatePath('./_gitignore'),
+      this.destinationPath('./.gitignore'), opts
+    );
   }
 
   install() {
