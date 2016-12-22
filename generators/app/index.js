@@ -1,13 +1,13 @@
 'use strict';
-const yeoman = require('yeoman-generator');
+const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const slug = require('slug');
 const titleCase = require('title-case');
 const request = require('sync-request');
 
-module.exports = yeoman.Base.extend({
-  prompting: function () {
+module.exports = class extends Generator {
+  prompting() {
     this.log(yosay(
       'Welcome to the ' + chalk.red('presto-preso') + ' generator!\n\nBuild a presentation with style and power.'
     ));
@@ -100,9 +100,9 @@ module.exports = yeoman.Base.extend({
       // To access props later use this.props.someAnswer;
       this.props = props;
     }.bind(this));
-  },
+  }
 
-  writing: function () {
+  writing() {
     const ctx = this;
     let repoUrl = this.props.repourl;
     let authNm = this.props.author;
@@ -180,9 +180,9 @@ module.exports = yeoman.Base.extend({
         ctx.destinationPath(val.replace(/_/, '.'))
       );
     });
-  },
+  }
 
-  install: function () {
+  install() {
     this.npmInstall();
   }
-});
+};
