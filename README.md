@@ -1,16 +1,20 @@
 # generator-presto-preso [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][codecov-image]][codecov-url]
 > yeoman generator to create a reveal.js presentation, the @edm00se way
 
-Configures and scaffolds an application which:
+## 🎉 💻 🖼
 
-- centers on a [reveal.js](http://lab.hakim.se/reveal-js/) slide deck
-- provides for static site generation to `docs/` for convenient hosting on [GitHub Pages](https://pages.github.com/)
-- provides a Node server, for convenient serving of the slide deck
+- a [reveal.js](http://lab.hakim.se/reveal-js/) slide deck
+- static site generation
+  - to `docs/` for convenient hosting on [GitHub Pages](https://pages.github.com/)
+- serves via Node
+  - for convenient serving of the slide deck
   - in an EJS template
   - with a viewer and a controller endpoint (`/control`)
   - the controller pushes slide state to the viewers via web socket connection
-- prefills the slide deck and project information with user's GitHub user info, or directly input information
-- provides live-reload local dev server, triggered by file save to the presentation (or any EJS template in `views/`, such as `views/presentation.ejs`)
+- prefills with user's GitHub info
+  - or directly input information
+- live-reload local dev server
+  - watches `views/`, such as `views/presentation.ejs`
 
 ## Installation
 
