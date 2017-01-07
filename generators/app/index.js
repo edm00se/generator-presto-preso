@@ -161,7 +161,7 @@ module.exports = class extends Generator {
         ctx.destinationPath(val), opts
       );
     });
-    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/'].forEach(function (val) {
+    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/'].forEach(val => {
       ctx.fs.copy(
         ctx.templatePath(val),
         ctx.destinationPath(val)
