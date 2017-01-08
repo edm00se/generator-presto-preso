@@ -1,7 +1,7 @@
 {
   "name": "generator-presto-preso",
   "version": "0.0.0-development",
-  "description": "yeoman generator to create a reveal.js presentation, the @edm00se way",
+  "description": "yeoman generator to create a reveal.js presentation, with node server, live reload for development, and websocket slide state push from controlling endpoint, and static site generation",
   "homepage": "https://github.com/edm00se/generator-presto-preso",
   "author": {
     "name": "Eric McCormick",

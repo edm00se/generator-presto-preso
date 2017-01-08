@@ -1,5 +1,5 @@
 # generator-presto-preso [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][codecov-image]][codecov-url]
-> yeoman generator to create a reveal.js presentation, the @edm00se way
+> yeoman generator to create a reveal.js presentation, live reload preview, websocket state push from controlling endpoint on node server, and static site generation
 
 ## 🎉 💻 🖼
 
