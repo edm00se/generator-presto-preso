@@ -8,6 +8,7 @@ This is a reveal.js based presentation, capable of both live serving with joined
 - `npm install`
 - `npm start` runs the server version, with web sockets enabled and `/control` route
 - `npm run build` builds a static copy into `docs/`, making it easy to host on GitHub Pages
+- `npm run dev` runs a local preview server with live-reload on changes to `views/*.ejs`
 
 #### Local Preview
 
