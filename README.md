@@ -1,4 +1,6 @@
 # generator-presto-preso [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][codecov-image]][codecov-url]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/edm00se/generator-presto-preso.svg)](https://greenkeeper.io/)
 > yeoman generator to create a reveal.js presentation, live reload preview, websocket state push from controlling endpoint on node server, and static site generation
 
 ## 🎉 💻 🖼
