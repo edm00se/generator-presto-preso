@@ -9,12 +9,10 @@ branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
 node_js:
-  - v7
-  - v6
-  - v5
-  - v4
+  - node
+  - lts/*
 before_install:
-  - npm i -g npm@^3.0.0
+  - npm i -g npm@^5.0.0
 before_script:
   - npm prune
 script:
