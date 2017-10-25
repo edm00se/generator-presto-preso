@@ -32,8 +32,8 @@
     "node-fetch": "1.7.3",
     "slugify": "1.2.1",
     "title-case": "2.1.1",
-    "yeoman-generator": "1.0.0",
-    "yosay": "1.2.1"
+    "yeoman-generator": "2.0.1",
+    "yosay": "2.0.1"
   },
   "devDependencies": {
     "commitizen": "2.9.6",
@@ -51,8 +51,8 @@
     "gulp-plumber": "1.1.0",
     "husky": "0.14.3",
     "semantic-release": "8.2.2",
-    "yeoman-assert": "2.2.2",
-    "yeoman-test": "1.6.0"
+    "yeoman-assert": "3.1.0",
+    "yeoman-test": "1.7.0"
   },
   "config": {
     "commitizen": {
