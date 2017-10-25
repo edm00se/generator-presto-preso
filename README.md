@@ -37,6 +37,16 @@ yo presto-preso
 - edit the `views/presentation.ejs` file
 - preview in your browser as you work
 
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars3.githubusercontent.com/u/622118?v=4" width="100px;"/><br /><sub>Eric McCormick</sub>](https://ericmccormick.io)<br />[🐛](https://github.com/edm00se/generator-presto-preso/issues?q=author%3Aedm00se "Bug reports") [💻](https://github.com/edm00se/generator-presto-preso/commits?author=edm00se "Code") [🎨](#design-edm00se "Design") [📖](https://github.com/edm00se/generator-presto-preso/commits?author=edm00se "Documentation") [💡](#example-edm00se "Examples") [🤔](#ideas-edm00se "Ideas, Planning, & Feedback") [👀](#review-edm00se "Reviewed Pull Requests") [⚠️](https://github.com/edm00se/generator-presto-preso/commits?author=edm00se "Tests") [🔧](#tool-edm00se "Tools") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.

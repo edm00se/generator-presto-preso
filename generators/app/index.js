@@ -8,9 +8,13 @@ const fetch = require('node-fetch');
 
 module.exports = class extends Generator {
   prompting() {
-    this.log(yosay(
-      'Welcome to the ' + chalk.red('presto-preso') + ' generator!\n\nBuild a presentation with style and power.'
-    ));
+    this.log(
+      yosay(
+        'Welcome to the ' +
+          chalk.red('presto-preso') +
+          ' generator!\n\nBuild a presentation with style and power.'
+      )
+    );
 
     const prompts = [
       {
@@ -42,7 +46,8 @@ module.exports = class extends Generator {
         },
         type: 'input',
         name: 'projname',
-        message: 'Name of the project on GitHub (e.g.- "some-project" for a project in your username space, or "user/some-project" for a project in a team or other declared username space)',
+        message:
+          'Name of the project on GitHub (e.g.- "some-project" for a project in your username space, or "user/some-project" for a project in a team or other declared username space)',
         default: slug(this.appname)
       },
       {
@@ -96,10 +101,12 @@ module.exports = class extends Generator {
       }
     ];
 
-    return this.prompt(prompts).then(function (props) {
-      // To access props later use this.props.someAnswer;
-      this.props = props;
-    }.bind(this));
+    return this.prompt(prompts).then(
+      function (props) {
+        // To access props later use this.props.someAnswer;
+        this.props = props;
+      }.bind(this)
+    );
   }
 
   writing() {
@@ -115,7 +122,11 @@ module.exports = class extends Generator {
         const tmp = this.props.projname.split('/');
         repoUrl = 'https://github.com/' + tmp[0] + '/' + tmp[1];
       } else {
-        repoUrl = 'https://github.com/' + this.props.githubname + '/' + this.props.projname;
+        repoUrl =
+          'https://github.com/' +
+          this.props.githubname +
+          '/' +
+          this.props.projname;
       }
       fetch('https://api.github.com/users/' + this.props.githubname)
         .then(res => res.json())
@@ -153,25 +164,38 @@ module.exports = class extends Generator {
       authorUrl: authUrl,
       ama: this.props.ama
     };
-    ['app.js', 'Gruntfile.js', 'LICENSE.md', 'package.json', 'README.md', './views/presentation.ejs', './views/header.ejs'].forEach(val => {
-      ctx.fs.copyTpl(
-        ctx.templatePath(val),
-        ctx.destinationPath(val), opts
-      );
+    [
+      'app.js',
+      'Gruntfile.js',
+      'LICENSE.md',
+      'package.json',
+      'README.md',
+      './views/presentation.ejs',
+      './views/header.ejs'
+    ].forEach(val => {
+      ctx.fs.copyTpl(ctx.templatePath(val), ctx.destinationPath(val), opts);
     });
-    ['./views/control.ejs', './views/controllerFooter.ejs', './views/error.ejs', './views/footer.ejs', './views/index.ejs', './public/', './routes/', './test/'].forEach(val => {
-      ctx.fs.copy(
-        ctx.templatePath(val),
-        ctx.destinationPath(val)
-      );
+    [
+      './views/control.ejs',
+      './views/controllerFooter.ejs',
+      './views/error.ejs',
+      './views/footer.ejs',
+      './views/index.ejs',
+      './public/',
+      './routes/',
+      './test/'
+    ].forEach(val => {
+      ctx.fs.copy(ctx.templatePath(val), ctx.destinationPath(val));
     });
     this.fs.copyTpl(
       this.templatePath('./_editorconfig'),
-      this.destinationPath('./.editorconfig'), opts
+      this.destinationPath('./.editorconfig'),
+      opts
     );
     this.fs.copyTpl(
       this.templatePath('./_gitignore'),
-      this.destinationPath('./.gitignore'), opts
+      this.destinationPath('./.gitignore'),
+      opts
     );
   }
 

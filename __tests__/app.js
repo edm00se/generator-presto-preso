@@ -4,11 +4,12 @@ const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 const ONE_SECOND = 1000;
 
-describe('generator-presto-preso', function () {
-  this.timeout(10 * ONE_SECOND);
-  describe('github flavored - my namespace', function () {
-    before(function () {
-      return helpers.run(path.join(__dirname, '../generators/app'))
+describe('generator-presto-preso', () => {
+  jest.setTimeout(10 * ONE_SECOND);
+  describe('github flavored - my namespace', () => {
+    beforeEach(() => {
+      return helpers
+        .run(path.join(__dirname, '../generators/app'))
         .withPrompts({
           name: 'demo-preso',
           description: 'some demo preso',
@@ -22,7 +23,7 @@ describe('generator-presto-preso', function () {
         .toPromise();
     });
 
-    it('creates required files', function () {
+    it('creates required files', () => {
       assert.file([
         'views/presentation.ejs',
         'app.js',
@@ -34,9 +35,10 @@ describe('generator-presto-preso', function () {
       ]);
     });
   });
-  describe('github flavored - team namespace', function () {
-    before(function () {
-      return helpers.run(path.join(__dirname, '../generators/app'))
+  describe('github flavored - team namespace', () => {
+    beforeEach(() => {
+      return helpers
+        .run(path.join(__dirname, '../generators/app'))
         .withPrompts({
           name: 'demo-preso',
           description: 'some demo preso',
@@ -50,7 +52,7 @@ describe('generator-presto-preso', function () {
         .toPromise();
     });
 
-    it('creates required files', function () {
+    it('creates required files', () => {
       assert.file([
         'views/presentation.ejs',
         'app.js',
@@ -62,9 +64,10 @@ describe('generator-presto-preso', function () {
       ]);
     });
   });
-  describe('bitbucket flavored', function () {
-    before(function () {
-      return helpers.run(path.join(__dirname, '../generators/app'))
+  describe('bitbucket flavored', () => {
+    beforeEach(() => {
+      return helpers
+        .run(path.join(__dirname, '../generators/app'))
         .withPrompts({
           name: 'demo-preso',
           description: 'some demo preso',
@@ -79,7 +82,7 @@ describe('generator-presto-preso', function () {
         .toPromise();
     });
 
-    it('creates required files', function () {
+    it('creates required files', () => {
       assert.file([
         'views/presentation.ejs',
         'app.js',
