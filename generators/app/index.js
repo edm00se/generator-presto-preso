@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 const slug = require('slugify');
 const titleCase = require('title-case');
-const request = require('sync-request');
+const fetch = require('node-fetch');
 
 module.exports = class extends Generator {
   prompting() {
@@ -117,28 +117,26 @@ module.exports = class extends Generator {
       } else {
         repoUrl = 'https://github.com/' + this.props.githubname + '/' + this.props.projname;
       }
-      const resp = request('GET', 'https://api.github.com/users/' + this.props.githubname, {
-        headers: {
-          'user-agent': 'Awesome-Octocat-App'
-        }
-      });
-      const ob = JSON.parse(resp.getBody());
-      /* istanbul ignore else */
-      if (ob.blog !== '') {
-        authUrl = ob.blog;
-      }
-      /* istanbul ignore else */
-      if (ob.bio !== '') {
-        bio = ob.bio;
-      }
-      /* istanbul ignore else */
-      if (ob.name !== '') {
-        authNm = ob.name;
-      }
-      /* istanbul ignore else */
-      if (ob.avatar_url !== '') {
-        avatarUrl = ob.avatar_url;
-      }
+      fetch('https://api.github.com/users/' + this.props.githubname)
+        .then(res => res.json())
+        .then(ob => {
+          /* istanbul ignore else */
+          if (ob.blog !== '') {
+            authUrl = ob.blog;
+          }
+          /* istanbul ignore else */
+          if (ob.bio !== '') {
+            bio = ob.bio;
+          }
+          /* istanbul ignore else */
+          if (ob.name !== '') {
+            authNm = ob.name;
+          }
+          /* istanbul ignore else */
+          if (ob.avatar_url !== '') {
+            avatarUrl = ob.avatar_url;
+          }
+        });
     }
     const opts = {
       name: this.props.name,

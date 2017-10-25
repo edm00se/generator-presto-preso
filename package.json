@@ -29,8 +29,8 @@
   ],
   "dependencies": {
     "chalk": "2.3.0",
+    "node-fetch": "1.7.3",
     "slugify": "1.2.1",
-    "sync-request": "4.1.0",
     "title-case": "2.1.1",
     "yeoman-generator": "1.0.0",
     "yosay": "1.2.1"
