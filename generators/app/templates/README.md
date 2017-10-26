@@ -12,14 +12,14 @@ This is a reveal.js based presentation, capable of both live serving with joined
 
 #### Local Preview
 
-When run locally, unless an environment variable is set, the application will run on port `5001`.
+When run locally, unless an environment variable is set, the application will run on port `5001` with [browser-sync](https://browsersync.io/) proxying in front of it on port `3000`.
 
 #### Server
 
 On the server, the app will try to pull, in order, the port number from an environment variable set of `PORT` or `VCAP_APP_PORT`.
 
 ##### Controlling the Presentation
-The node app uses basic auth to protect the _/control_ end point. By default, these credentials (which are embedded in the _/routes/index.js_ file). The values are settable via the `CONTROLLER_NAME` and `CONTROLLER_PW` environment variables, with defaults of :
+The node app uses basic auth to protect the _/control_ end point. By default, these credentials (which are embedded in the _/routes/index.js_ file). The values are settable via the `PRESO_CONTROLLER_NAME` and `PRESO_CONTROLLER_PW` environment variables, with defaults of :
 
 ```
 username: admin

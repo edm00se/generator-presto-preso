@@ -118,6 +118,8 @@ module.exports = class extends Generator {
     let bio;
     let twitName = this.props.twittername;
     if (this.props.usegh) {
+      authNm = this.props.githubname;
+      authUrl = 'https://github.com/' + this.props.githubname;
       if (this.props.projname.includes('/')) {
         const tmp = this.props.projname.split('/');
         repoUrl = 'https://github.com/' + tmp[0] + '/' + tmp[1];
@@ -169,6 +171,7 @@ module.exports = class extends Generator {
       'Gruntfile.js',
       'LICENSE.md',
       'package.json',
+      'data.json',
       'README.md',
       './views/presentation.ejs',
       './views/header.ejs'
