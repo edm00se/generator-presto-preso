@@ -1,7 +1,13 @@
-# generator-presto-preso [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][codecov-image]][codecov-url]
+<div align="center">
+<h1>generator-presto-preso</h1>
+<pre><code>yo presto-preso</code></pre>
+</div>
+
 > yeoman generator to create a reveal.js presentation, live reload preview, websocket state push from controlling endpoint on node server, and static site generation
 
-## 🎉 💻 🖼
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][codecov-image]][codecov-url]
+
+## 💻 🖼 🎉
 
 - a [reveal.js](http://lab.hakim.se/reveal-js/) slide deck
 - static site generation
