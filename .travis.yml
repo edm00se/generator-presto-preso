@@ -2,17 +2,19 @@ sudo: false
 language: node_js
 notifications:
   email: false
-cache:
-  yarn: true
-  directories:
-    - node_modules
+#cache:
+#  yarn: true
+#  directories:
+#    - node_modules
 node_js:
   - node
   - lts/*
-before_script:
-  - npm prune
+before_install:
+  - yarn global add codecov
 script:
-  - yarn test
+  - yarn test:ci
+  - ls
 after_success:
   - yarn semantic-release
-  - bash <(curl -s https://codecov.io/bash)
+  - ls
+  - codecov

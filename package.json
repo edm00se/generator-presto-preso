@@ -12,7 +12,8 @@
   "scripts": {
     "add": "all-contributors add",
     "generate": "all-contributors generate",
-    "test": "jest --coverage",
+    "test": "jest",
+    "test:ci": "jest --coverage",
     "watch": "jest --watch",
     "format": "prettier-eslint \"generators/**/*.js\" \"__tests__/*.js\" --write",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
@@ -71,6 +72,8 @@
       "functions": 100,
       "lines": 100,
       "statements": 100
-    }
+    },
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
