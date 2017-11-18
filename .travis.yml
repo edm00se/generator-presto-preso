@@ -3,17 +3,16 @@ language: node_js
 notifications:
   email: false
 cache:
+  yarn: true
   directories:
     - node_modules
 node_js:
   - node
   - lts/*
-before_install:
-  - npm i -g npm@^5.0.0
 before_script:
   - npm prune
 script:
-  - npm run test
+  - yarn test
 after_success:
-  - npm run semantic-release
+  - yarn semantic-release
   - bash <(curl -s https://codecov.io/bash)
