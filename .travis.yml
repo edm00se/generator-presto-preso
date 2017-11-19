@@ -4,8 +4,6 @@ notifications:
   email: false
 cache:
   yarn: true
-  directories:
-    - node_modules
 node_js:
   - node
   - lts/*
