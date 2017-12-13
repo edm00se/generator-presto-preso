@@ -168,13 +168,12 @@ module.exports = class extends Generator {
     };
     [
       'app.js',
-      'Gruntfile.js',
       'LICENSE.md',
       'package.json',
-      'data.json',
       'README.md',
       './views/presentation.ejs',
-      './views/header.ejs'
+      './views/header.ejs',
+      'static-config.js'
     ].forEach(val => {
       ctx.fs.copyTpl(ctx.templatePath(val), ctx.destinationPath(val), opts);
     });
@@ -186,7 +185,8 @@ module.exports = class extends Generator {
       './views/index.ejs',
       './public/',
       './routes/',
-      './test/'
+      './test/',
+      'static-build.js'
     ].forEach(val => {
       ctx.fs.copy(ctx.templatePath(val), ctx.destinationPath(val));
     });

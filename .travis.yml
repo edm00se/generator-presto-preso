@@ -9,6 +9,7 @@ node_js:
   - lts/*
 before_install:
   - yarn global add codecov
+  - npm install -g npm@latest
 script:
   - yarn test:ci
 after_success:

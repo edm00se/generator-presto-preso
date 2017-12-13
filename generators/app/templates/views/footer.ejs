@@ -1,49 +1,48 @@
-	<script src="lib/js/head.min.js"></script>
-	<script src="components/reveal.js/js/reveal.js"></script>
-	<script>
-		// Full list of configuration options available at:
-		// https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			history: true,
-			center: true,
-			fragments: true,
+<script src="https://unpkg.com/headjs@1.0.3/dist/1.0.0/head.min.js"></script>
+<script src="https://unpkg.com/reveal.js@3.6.0/js/reveal.js"></script>
+<script>
+	// Full list of configuration options available at:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+		fragments: true,
 
-			transition: 'slide', // none/fade/slide/convex/concave/zoom
+		transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-			// Optional reveal.js plugins
-			dependencies: [
-				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				// Interpret Markdown in <section> elements
-        { src: './components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: './components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				//{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: './components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: './components/reveal.js/plugin/zoom-js/zoom.js', async: true },
-				{ src: './components/reveal.js/plugin/notes/notes.js', async: true }
-			]
-		});
+		// Optional reveal.js plugins
+		dependencies: [
+			// { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			// Interpret Markdown in <section> elements
+            { src: 'https://unpkg.com/reveal.js@3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'https://unpkg.com/reveal.js@3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'https://unpkg.com/reveal.js@3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'https://unpkg.com/reveal.js@3.6.0/plugin/zoom-js/zoom.js', async: true },
+            { src: 'https://unpkg.com/reveal.js@3.6.0/plugin/notes/notes.js', async: true }
+		]
+	});
 
-	</script>
-    <!-- Socket.io client-->
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-            (function(){
-              Reveal.initialize({
-                history: true
-              });
+</script>
+<!-- Socket.io client-->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    (function(){
+        Reveal.initialize({
+            history: true
+        });
 
-              var proto = window.location.protocol;
-              var h = window.location.host;
-              var val = proto+'//'+h;
-              console.log(val);
-              var socket = io.connect(val);
-              socket.on('slidechanged', function (data) {
-                Reveal.slide(data.indexh, data.indexv, data.indexf);
-              });
+        var proto = window.location.protocol;
+        var h = window.location.host;
+        var val = proto+'//'+h;
+        console.log(val);
+        var socket = io.connect(val);
+        socket.on('slidechanged', function (data) {
+            Reveal.slide(data.indexh, data.indexv, data.indexf);
+        });
 
-            })();
-        </script>
+    })();
+</script>
 </body>
 </html>

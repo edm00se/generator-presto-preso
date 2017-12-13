@@ -28,7 +28,8 @@ describe('generator-presto-preso', () => {
         'views/presentation.ejs',
         'app.js',
         'package.json',
-        'Gruntfile.js',
+        'static-config.js',
+        'static-build.js',
         'README.md',
         'routes/index.js',
         'test/index.js'
@@ -57,7 +58,8 @@ describe('generator-presto-preso', () => {
         'views/presentation.ejs',
         'app.js',
         'package.json',
-        'Gruntfile.js',
+        'static-config.js',
+        'static-build.js',
         'README.md',
         'routes/index.js',
         'test/index.js'
@@ -87,7 +89,8 @@ describe('generator-presto-preso', () => {
         'views/presentation.ejs',
         'app.js',
         'package.json',
-        'Gruntfile.js',
+        'static-config.js',
+        'static-build.js',
         'README.md',
         'routes/index.js',
         'test/index.js'

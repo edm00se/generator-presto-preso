@@ -1,14 +1,18 @@
 'use strict';
 
-var path = require('path');
-var chai = require('chai');
-var chaiFiles = require('chai-files');
-var chaiHttp = require('chai-http');
+const fs = require('fs');
+const path = require('path');
+const child = require('child_process');
+
+const chai = require('chai');
+const chaiFiles = require('chai-files');
+const chaiHttp = require('chai-http');
 chai.use(chaiFiles);
 chai.use(chaiHttp);
-var expect = chai.expect;
-var file = chaiFiles.file;
-var dir = chaiFiles.dir;
+
+const expect = chai.expect;
+const file = chaiFiles.file;
+const dir = chaiFiles.dir;
 
 const server = require('../app');
 
@@ -22,11 +26,14 @@ describe('app', () => {
 
   describe('server presentation', done => {
     it('should serve successfully', () => {
-      chai.request(server).get('/').end(function (err, res) {
-        expect(err).to.be.null;
-        expect(res).to.have.status(200);
-        done();
-      });
+      chai
+        .request(server)
+        .get('/')
+        .end((err, res) => {
+          expect(err).to.be.null;
+          expect(res).to.have.status(200);
+          done();
+        });
     });
   });
 });
