@@ -22,7 +22,15 @@
 - live-reload local dev server
   - watches `views/`, such as `views/presentation.ejs`
 
-## Installation
+## Try With No Install
+
+Run:
+
+```sh
+npx -p yo -p generator-presto-preso -c 'yo presto-preso'
+```
+
+## Full Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-presto-preso using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
