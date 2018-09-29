@@ -9,7 +9,7 @@ node_js:
   - node
   - lts/*
 before_install:
-  - npm install -g codecov npm@latest
+  - npm install -g codecov
 script:
   - npm run test:ci
 after_success:
