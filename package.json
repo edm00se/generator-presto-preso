@@ -1,6 +1,6 @@
 {
   "name": "generator-presto-preso",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "yeoman generator to create a reveal.js presentation, with node server, live reload for development, and websocket slide state push from controlling endpoint, and static site generation",
   "homepage": "https://github.com/edm00se/generator-presto-preso",
   "author": {
