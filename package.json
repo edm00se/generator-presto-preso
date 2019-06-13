@@ -44,7 +44,7 @@
     "cz-conventional-changelog": "2.1.0",
     "eslint": "5.16.0",
     "eslint-config-xo-space": "0.20.0",
-    "husky": "1.0.1",
+    "husky": "2.4.1",
     "jest": "24.7.1",
     "lint-staged": "7.3.0",
     "prettier-eslint-cli": "4.7.1",
