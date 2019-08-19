@@ -1,3 +1,7 @@
+Note: This repository is approaching being archived. It is still published to and available on npm's public repository. For the why, consult [issue#73](https://github.com/edm00se/generator-presto-preso/issues/73).
+
+-----------
+
 <div align="center">
 <h1>generator-presto-preso</h1>
 <pre><code>yo presto-preso</code></pre>
