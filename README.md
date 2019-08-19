@@ -31,6 +31,12 @@ Note: This repository is approaching being archived. It is still published to an
 Run:
 
 ```sh
+npm init yo presto-preso
+```
+
+To use `npx` as opposed to the npm initializer, run:
+
+```sh
 npx -p yo -p generator-presto-preso -c 'yo presto-preso'
 ```
 
