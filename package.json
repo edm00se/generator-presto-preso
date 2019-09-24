@@ -16,7 +16,6 @@
     "test:ci": "jest --coverage",
     "watch": "jest --watch",
     "format": "prettier-eslint \"generators/**/*.js\" \"__tests__/*.js\" --write",
-    "precommit": "npm run format && lint-staged && npm test",
     "commit": "git-cz"
   },
   "license": "MIT",
@@ -69,6 +68,11 @@
       "functions": 100,
       "lines": 100,
       "statements": 100
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && lint-staged && npm test"
     }
   }
 }
