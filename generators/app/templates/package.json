@@ -5,9 +5,10 @@
   "scripts": {
     "start": "node app.js",
     "dev": "concurrently --kill-others \"npm start\" \"browser-sync start -p http://localhost:5001/ --files views\"",
-    "static-preview": "npm run build && cd docs && browser-sync start --server",
+    "static-preview": "cd docs && browser-sync start --server",
     "clean": "rimraf docs/index.html",
     "build": "node static-build.js",
+    "pretest": "npm run build",
     "test": "concurrently --kill-others \"npm run static-preview\" \"mocha --exit\" --success first"
   },
   "dependencies": {
