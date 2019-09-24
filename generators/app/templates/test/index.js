@@ -24,8 +24,8 @@ describe('app', () => {
     });
   });
 
-  describe('server presentation', done => {
-    it('should serve successfully', () => {
+  describe('server presentation', () => {
+    it('should serve successfully', done => {
       chai
         .request(server)
         .get('/')
