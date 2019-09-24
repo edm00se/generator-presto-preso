@@ -130,6 +130,7 @@ module.exports = class extends Generator {
           '/' +
           this.props.projname;
       }
+
       fetch('https://api.github.com/users/' + this.props.githubname)
         .then(res => res.json())
         .then(ob => {
@@ -137,20 +138,24 @@ module.exports = class extends Generator {
           if (ob.blog !== '') {
             authUrl = ob.blog;
           }
+
           /* istanbul ignore else */
           if (ob.bio !== '') {
             bio = ob.bio;
           }
+
           /* istanbul ignore else */
           if (ob.name !== '') {
             authNm = ob.name;
           }
+
           /* istanbul ignore else */
           if (ob.avatar_url !== '') {
             avatarUrl = ob.avatar_url;
           }
         });
     }
+
     const opts = {
       name: this.props.name,
       pName: titleCase(ctx.props.name),
@@ -170,6 +175,7 @@ module.exports = class extends Generator {
       'app.js',
       'LICENSE.md',
       'package.json',
+      'package-lock.json',
       'README.md',
       './views/presentation.ejs',
       './views/header.ejs',
