@@ -3,7 +3,7 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const slug = require('slugify');
-const titleCase = require('title-case');
+const titleCase = require('title-case').titleCase;
 const fetch = require('node-fetch');
 
 module.exports = class extends Generator {
