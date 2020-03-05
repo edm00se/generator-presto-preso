@@ -34,7 +34,7 @@
     "node-fetch": "2.6.0",
     "slugify": "1.4.0",
     "title-case": "3.0.2",
-    "yeoman-generator": "4.5.0",
+    "yeoman-generator": "4.6.0",
     "yosay": "2.0.2"
   },
   "devDependencies": {
